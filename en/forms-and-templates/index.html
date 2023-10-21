@@ -342,7 +342,7 @@
           </div>
         </div>
         <script src="/assets/js/topbar.js"></script>
-        <section class="main__content__box">
+        <section class="main__content__box firstPage">
           <div class="form-and-templates">
             <div id="filter" class="filter">
               <div class="filter__tabs">
@@ -1609,6 +1609,71 @@
           </div>
           <script src="/assets/js/menu.js"></script>
         </section>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.querySelector(".topbar__search__input");
+            const fiestData = document.querySelector(".allLinks");
+            const firstPage = document.querySelector(".firstPage");
+            const nofoundresult = document.querySelector(".nofoundresult");
+        
+            searchInput.addEventListener("input", function () {
+              const searchTerm = this.value.toLowerCase();
+              const links = document.querySelectorAll(".titleLink");
+        
+              links.forEach(function (link) {
+                const linkText = link.textContent.toLowerCase();
+                if (searchTerm === "") {
+                  firstPage.classList.remove("hidden");
+                  nofoundresult.classList.add("hidden");
+                } else {
+                  if (linkText.includes(searchTerm)) {
+                    nofoundresult.classList.add("hidden");
+                    fiestData.classList.remove("hidden");
+                    firstPage.classList.add("hidden");
+                    link.style.display = "block";
+                  } else {
+                    firstPage.classList.add("hidden");
+                    nofoundresult.classList.remove("hidden");
+                    link.style.display = "none";
+                  }
+                }
+              });
+            });
+          });
+        </script>  
+            <div class="nofoundresult hidden"> <img class="imgnofoundresult" src="../../assets/images/nofoundresult.png" />
+              <p style="font-size: 25px;">لا يوجد نتائج لعرضها</p>
+            </div>
+            <div class="allLinks hidden">
+              <div class="titleLink">
+                <div> رابط الصفحة </div>
+                <a href="../ar/dashboard-details/">عرض جميع المعلومات المتعلقة باللوحة الرئيسة و
+                  المشاريع</a>
+              </div>
+              <div class="titleLink">
+                <div> رابط الصفحة </div>
+                <a href="../ar/dashboard-details/">عرض جميع المعلومات المتعلقة باللوحة الرئيسية كالاحصائيات و المشاريع</a>
+              </div>
+              <div class="titleLink">
+                <div> رابط الصفحة </div>
+                <a href="../ar/forms-and-templates/"> عرض جميع المعلومات المتعلقة النماذج والقوالب </a>
+              </div>
+              <div class="titleLink">
+                <div> رابط الصفحة </div>
+                <a href="../ar/delegation/"> عرض جميع المعلومات المتعلقة بالتوفيض  </a>
+              </div>
+              <div class="titleLink">
+                <div> رابط الصفحة </div>
+                <a href="../ar/reports/"> عرض جميع المعلومات المتعلقة بالتقارير  </a>
+              </div>
+              <div class="titleLink">
+                <div> رابط الصفحة </div>
+                <a href="../ar/project-center/"> عرض جميع المعلومات المتعلقة بالمشاريع  </a>
+              </div>
+              <div class="titleLink">
+                <div> رابط الصفحة </div>
+                <a href="../ar/project-card/"> عرض جميع المعلومات المتعلقة بتفاصيل المشروع  </a>
+              </div>
       </div>
 
       <script type="module">

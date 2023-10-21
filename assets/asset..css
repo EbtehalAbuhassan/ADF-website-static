@@ -292,6 +292,15 @@ html[lang=ar] .menu .menu-dropdown__list {
     border: none;
     outline: none
 }
+.InputCardCenter {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    color: #737791;
+    background-color: transparent;
+    border: none;
+    outline: none
+}
 
 .topbar__search__button {
     width: 4rem;
@@ -3420,4 +3429,28 @@ html[lang=en] .project-details .project-dates .project-start-date {
     font-size: 1.4rem;
     color: #fff;
     cursor: pointer
+}
+.firstPage{
+    /* display: none; */
+}
+.nofoundresult{
+margin: 0 auto;
+display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.imgnofoundresult{
+width: 550px;
+height: 550px;
+}
+.allLinks{
+    color:#000000;
+    font-size: 20px;
+
+}
+.allLinks a{
+    color:#029E81;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(209, 200, 200);
 }

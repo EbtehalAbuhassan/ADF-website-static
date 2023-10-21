@@ -186,7 +186,7 @@
         </div>
       </div>
       <script src="/assets/js/topbar.js"></script>
-      <section class="main__content__box">
+      <section class="main__content__box firstPage">
         <div class="delegation">
           <div id="filter" class="filter">
             <div class="filter__container ">
@@ -1129,6 +1129,74 @@
         </div>
         <script src="/assets/js/menu.js"></script>
       </section>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const searchInput = document.querySelector(".topbar__search__input");
+          const fiestData = document.querySelector(".allLinks");
+          const firstPage = document.querySelector(".firstPage");
+          const nofoundresult = document.querySelector(".nofoundresult");
+      
+          searchInput.addEventListener("input", function () {
+            const searchTerm = this.value.toLowerCase();
+            const links = document.querySelectorAll(".titleLink");
+      
+            links.forEach(function (link) {
+              const linkText = link.textContent.toLowerCase();
+              if (searchTerm === "") {
+                firstPage.classList.remove("hidden");
+                nofoundresult.classList.add("hidden");
+              } else {
+                if (linkText.includes(searchTerm)) {
+                  nofoundresult.classList.add("hidden");
+                  fiestData.classList.remove("hidden");
+                  firstPage.classList.add("hidden");
+                  link.style.display = "block";
+                } else {
+                  firstPage.classList.add("hidden");
+                  nofoundresult.classList.remove("hidden");
+                  link.style.display = "none";
+                }
+              }
+            });
+          });
+        });
+      </script> 
+      <script src="/assets/js/menu.js"></script>
+    </section>
+    <div class="nofoundresult hidden"> <img class="imgnofoundresult" src="../../assets/images/nofoundresult.png" />
+      <p style="font-size: 25px;">No Found Result  </p>
+    </div>
+    <div class="allLinks hidden">
+      <div class="titleLink">
+        <div> Page Link  </div>
+        <a href="../ar/dashboard-details/">  Display all information related to the main board and
+          Projects    </a>
+      </div>
+      <div class="titleLink">
+        <div>  Page Link </div>
+        <a href="../ar/dashboard-details/">Display all information related to the main panel, such as statistics and charts  </a>
+      </div>
+      <div class="titleLink">
+        <div>  Page Link </div>
+        <a href="../ar/forms-and-templates/"> 
+          View all information related to forms and templates </a>
+      </div>
+      <div class="titleLink">
+        <div>  Page Link </div>
+        <a href="../ar/delegation/"> View all information related to delegation  </a>
+      </div>
+      <div class="titleLink">
+        <div>  Page Link </div>
+        <a href="../ar/reports/"> View all information related to reports </a>
+      </div>
+      <div class="titleLink">
+        <div>  Page Link </div>
+        <a href="../ar/project-center/"> View all information related to projects  </a>
+      </div>
+      <div class="titleLink">
+        <div>  Page Link </div>
+        <a href="../ar/project-card/"> View all information related to project details </a>
+      </div>
     </div>
   </main>
 

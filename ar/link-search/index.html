@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/icons/ADF-logo.svg" type="image/x-icon" />
-    <title>صندوق التنمية الزراعية: التقارير</title>
+    <title>صندوق التنمية الزراعية: لوحة التحكم</title>
     <link rel="stylesheet" href="/assets/asset..css" />
   </head>
   <body>
@@ -15,10 +15,13 @@
         </div>
         <div class="sidebar__menu">
           <ul>
-            <li class="sidebar__menu__item" id="dashboard">
+            <li
+              class="sidebar__menu__item sidebar__menu__item--active"
+              id="dashboard"
+            >
               <a href="/ar"
                 ><img
-                  src="/assets/icons/dashboard.svg"
+                  src="/assets/icons/dashboard-active.svg"
                   alt="لوحة التحكم"
                 /><span>لوحة التحكم</span></a
               >
@@ -39,15 +42,11 @@
                 /><span>خطة المشاريع</span></a
               >
             </li>
-            <li
-              class="sidebar__menu__item sidebar__menu__item--active"
-              id="reports"
-            >
+            <li class="sidebar__menu__item" id="reports">
               <a href="/ar/reports"
-                ><img
-                  src="/assets/icons/reports-active.svg"
-                  alt="التقارير"
-                /><span>التقارير</span></a
+                ><img src="/assets/icons/reports.svg" alt="التقارير" /><span
+                  >التقارير</span
+                ></a
               >
             </li>
             <li class="sidebar__menu__item" id="formsAndTemplates">
@@ -101,8 +100,8 @@
       <div class="main__content">
         <section class="topbar">
           <div class="topbar__breadcrumbList">
-            <a href="/ar/reports" class="topbar__breadcrumbList__item--first"
-              >التقارير</a
+            <a href="/" class="topbar__breadcrumbList__item--first"
+              >لوحة التحكم</a
             >
           </div>
           <div class="topbar__search">
@@ -178,9 +177,7 @@
                     </button>
                   </li>
                   <li class="topbar__user__menu__item">
-                    <a
-                      href="/en/reports/"
-                      class="topbar__user__menu__item__link"
+                    <a href="/en/" class="topbar__user__menu__item__link"
                       >English</a
                     >
                   </li>
@@ -340,102 +337,7 @@
             </div>
           </div>
         </div>
-        <script src="/assets/js/topbar.js"></script>
-        <section class="main__content__box firstPage">
-          <div class="reports">
-            <a href="/ar/report-details"
-              ><div class="reports__box">
-                <h3>تقرير اداء المشاريع</h3>
-                <div class="reports__box__icon">
-                  <img
-                    src="/assets/icons/report-1.svg"
-                    alt="تقرير اداء المشاريع"
-                  />
-                </div></div></a
-            ><a href="/ar/report-details"
-              ><div class="reports__box">
-                <h3>تقرير المشروع</h3>
-                <div class="reports__box__icon">
-                  <img src="/assets/icons/report-2.svg" alt="تقرير المشروع" />
-                </div></div></a
-            ><a href="/ar/report-details"
-              ><div class="reports__box">
-                <h3>تقرير المشكلات والمخاطر</h3>
-                <div class="reports__box__icon">
-                  <img
-                    src="/assets/icons/report-3.svg"
-                    alt="تقرير المشكلات والمخاطر"
-                  />
-                </div></div
-            ></a>
-          </div>
-        </section>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const searchInput = document.querySelector(".topbar__search__input");
-            const fiestData = document.querySelector(".allLinks");
-            const firstPage = document.querySelector(".firstPage");
-            const nofoundresult = document.querySelector(".nofoundresult");
-        
-            searchInput.addEventListener("input", function () {
-              const searchTerm = this.value.toLowerCase();
-              const links = document.querySelectorAll(".titleLink");
-        
-              links.forEach(function (link) {
-                const linkText = link.textContent.toLowerCase();
-                if (searchTerm === "") {
-                  firstPage.classList.remove("hidden");
-                  nofoundresult.classList.add("hidden");
-                } else {
-                  if (linkText.includes(searchTerm)) {
-                    nofoundresult.classList.add("hidden");
-                    fiestData.classList.remove("hidden");
-                    firstPage.classList.add("hidden");
-                    link.style.display = "block";
-                  } else {
-                    firstPage.classList.add("hidden");
-                    nofoundresult.classList.remove("hidden");
-                    link.style.display = "none";
-                  }
-                }
-              });
-            });
-          });
-        </script>  
-        <div class="nofoundresult hidden"> <img class="imgnofoundresult" src="../../assets/images/nofoundresult.png" />
-          <p style="font-size: 25px;">لا يوجد نتائج لعرضها</p>
-        </div>
-        <div class="allLinks hidden">
-          <div class="titleLink">
-            <div> رابط الصفحة </div>
-            <a href="../ar/dashboard-details/">عرض جميع المعلومات المتعلقة باللوحة الرئيسة و
-              المشاريع</a>
-          </div>
-          <div class="titleLink">
-            <div> رابط الصفحة </div>
-            <a href="../ar/dashboard-details/">عرض جميع المعلومات المتعلقة باللوحة الرئيسية كالاحصائيات و المشاريع</a>
-          </div>
-          <div class="titleLink">
-            <div> رابط الصفحة </div>
-            <a href="../ar/forms-and-templates/"> عرض جميع المعلومات المتعلقة النماذج والقوالب </a>
-          </div>
-          <div class="titleLink">
-            <div> رابط الصفحة </div>
-            <a href="../ar/delegation/"> عرض جميع المعلومات المتعلقة بالتوفيض  </a>
-          </div>
-          <div class="titleLink">
-            <div> رابط الصفحة </div>
-            <a href="../ar/reports/"> عرض جميع المعلومات المتعلقة بالتقارير  </a>
-          </div>
-          <div class="titleLink">
-            <div> رابط الصفحة </div>
-            <a href="../ar/project-center/"> عرض جميع المعلومات المتعلقة بالمشاريع  </a>
-          </div>
-          <div class="titleLink">
-            <div> رابط الصفحة </div>
-            <a href="../ar/project-card/"> عرض جميع المعلومات المتعلقة بتفاصيل المشروع  </a>
-          </div>
-      </div>
+       <a href="/ar/link-search/index.html"></a>
       </div>
     </main>
   </body>

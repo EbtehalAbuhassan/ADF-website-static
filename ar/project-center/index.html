@@ -45,7 +45,7 @@
         <div class="topbar__breadcrumbList"><a href="/ar/project-center"
             class="topbar__breadcrumbList__item--first">مركز المشاريع</a></div>
         <div class="topbar__search"><button class="topbar__search__button"><img src="/assets/icons/search.svg"
-              alt="search"></button><input type="text" class="topbar__search__input" placeholder="ابحث هنا ..."></div>
+              alt="search"></button><input type="text" class="InputCardCenter" placeholder="ابحث هنا ..."></div>
         <div class="topbar__group">
           <div class="topbar__notifications">
             <div class="topbar__notifications__icon not-read"><img src="/assets/icons/notification.svg"
@@ -187,7 +187,7 @@
       </div>
       <script src="/assets/js/topbar.js"></script>
       <section class="main__content__box">
-        <div class="project-center">
+        <div class="project-center  project-center-page">
           <div id="filter" class="filter">
             <div class="filter__container ">
               <div class="filter__select"><select id="filter-select">
@@ -894,6 +894,75 @@
             });
           </script>
         </div>
+
+        <div class="nofoundresult  nofoundresult-project-center hidden"> <img class="imgnofoundresult"
+           src="../../assets//images/nofoundresult.png" />
+          <p style="font-size: 25px;">لا يوجد نتائج لعرضها</p>
+        </div>
+        <div class="allLinks allLinks-prject-center hidden">
+          <div class="titleLink">
+            <div> رابط الصفحة </div>
+            <a href="../ar/dashboard-details/">عرض جميع المعلومات المتعلقة باللوحة الرئيسة و
+              المشاريع</a>
+          </div>
+          <div class="titleLink">
+            <div> رابط الصفحة </div>
+            <a href="../ar/dashboard-details/">عرض جميع المعلومات المتعلقة باللوحة الرئيسية كالاحصائيات و المشاريع</a>
+          </div>
+          <div class="titleLink">
+            <div> رابط الصفحة </div>
+            <a href="../ar/forms-and-templates/"> عرض جميع المعلومات المتعلقة النماذج والقوالب </a>
+          </div>
+          <div class="titleLink">
+            <div> رابط الصفحة </div>
+            <a href="../ar/delegation/"> عرض جميع المعلومات المتعلقة بالتوفيض  </a>
+          </div>
+          <div class="titleLink">
+            <div> رابط الصفحة </div>
+            <a href="../ar/reports/"> عرض جميع المعلومات المتعلقة بالتقارير  </a>
+          </div>
+          <div class="titleLink">
+            <div> رابط الصفحة </div>
+            <a href="../ar/project-center/"> عرض جميع المعلومات المتعلقة بالمشاريع  </a>
+          </div>
+          <div class="titleLink">
+            <div> رابط الصفحة </div>
+            <a href="../ar/project-card/"> عرض جميع المعلومات المتعلقة بتفاصيل المشروع  </a>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.querySelector(".InputCardCenter");
+            const fiestData = document.querySelector(".allLinks-prject-center");
+            const firstPage = document.querySelector(".project-center-page");
+            const nofoundresult = document.querySelector(".nofoundresult-project-center");
+        
+            searchInput.addEventListener("input", function () {
+              const searchTerm = this.value.toLowerCase();
+        
+              const links = document.querySelectorAll(".titleLink");
+        
+              links.forEach(function (link) {
+                const linkText = link.textContent.toLowerCase();
+                if (searchTerm === "") {
+                  firstPage.classList.remove("hidden");
+                  nofoundresult.classList.add("hidden");
+                } else {
+                  if (linkText.includes(searchTerm)) {
+                    nofoundresult.classList.add("hidden");
+                    fiestData.classList.remove("hidden");
+                    firstPage.classList.add("hidden");
+                    link.style.display = "block";
+                  } else {
+                    firstPage.classList.add("hidden");
+                    nofoundresult.classList.remove("hidden");
+                    link.style.display = "none";
+                  }
+                }
+              });
+            });
+          });
+        </script>
         <script src="/assets/js/menu.js"></script>
         <script>
           const progressBars = document.querySelectorAll(".progress-bar");
