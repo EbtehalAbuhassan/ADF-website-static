@@ -205,7 +205,8 @@
               </div>
               <div class="filter__more">
                 <div class="filter__more__info"><img src="/assets/icons/info.svg" alt="info"></div>
-                <div class="filter__more__list"><img src="/assets/icons/list.svg" alt="list"></div>
+                <div class="filter__more__list"><img src="/assets/icons/list.svg" alt="list"></div><a
+                  class="filter__more__add addDeglion" href="#"><img src="/assets/icons/add.svg" alt="add"></a>
               </div>
             </div>
           </div>
@@ -1292,12 +1293,133 @@
 
 
 
+  <div class="topbar__delegate__model stepDeg1 hidden">
+    <div class="topbar__delegate__model__container">
+      <div class="topbar__delegate__model__header">
+        <h3 class="topbar__delegate__model__header__title">Delegate User </h3>
+        <div class="topbar__delegate__model__header__close closeXX"><img src="/assets/icons/close.svg" alt="close"></div>
+      </div>
+      <div class="topbar__delegate__model__body">
+        <form class="topbar__delegate__model__form">
+          <div class="form-group w-33"><label for="userName">User Name </label>
+            <div class="input-group"><input type="text" class="form-control" id="userName" name="userName"
+                placeholder="User Name "></div>
+          </div>
+          <script>(function () {
+              const name = "userName";
+
+              const input = document.getElementById(name);
+              const button = document.getElementById(`${name}-button`);
+              const label = document.querySelector(".custom-file-label");
+
+              if (input.type === "file") {
+                button.addEventListener("click", () => {
+                  console.log("clicked");
+                  input.click();
+                });
+              }
+            })();</script>
+          <div class="form-group w-33"><label for="delegateStartDate"> 
+            
+            Delegate Start Date </label>
+            <div class="input-group"><input type="date" class="form-control" id="delegateStartDate"
+                name="delegateStartDate" placeholder="Delegate Start Date  "></div>
+          </div>
+          <script>(function () {
+              const name = "delegateStartDate";
+
+              const input = document.getElementById(name);
+              const button = document.getElementById(`${name}-button`);
+              const label = document.querySelector(".custom-file-label");
+
+              if (input.type === "file") {
+                button.addEventListener("click", () => {
+                  console.log("clicked");
+                  input.click();
+                });
+              }
+            })();</script>
+          <div class="form-group w-33"><label for="delegateEndDate">Delegate End Date  </label>
+            <div class="input-group"><input type="date" class="form-control" id="delegateEndDate"
+                name="delegateEndDate" placeholder="Delegate End Date"></div>
+          </div>
+          <script>(function () {
+              const name = "delegateEndDate";
+
+              const input = document.getElementById(name);
+              const button = document.getElementById(`${name}-button`);
+              const label = document.querySelector(".custom-file-label");
+
+              if (input.type === "file") {
+                button.addEventListener("click", () => {
+                  console.log("clicked");
+                  input.click();
+                });
+              }
+            })();</script>
+        </form>
+      </div>
+      <div class="topbar__delegate__model__actions"><button
+          class="topbar__delegate__model__actions__button topbar__delegate__model__actions__button--cancel cancelDeg">Cancel</button><button
+          class="topbar__delegate__model__actions__button topbar__delegate__model__actions__button--next nextDeg">delegate</button>
+      </div>
+    </div>
+  </div>
+  <div class="topbar__delegate__model stepDeg2 hidden">
+    <div class="topbar__delegate__model__container">
+      <div class="topbar__delegate__model__header">
+        <h3 class="topbar__delegate__model__header__title">Confirm delegate</h3>
+        <div class="topbar__delegate__model__header__close clancelDeg2Icon"><img src="/assets/icons/close.svg" alt="close"></div>
+      </div>
+      <div class="topbar__delegate__model__body">
+        <p class="topbar__delegate__model__body__description">   Are you sure you want to delegate  <span
+            class="topbar__delegate__model__body__description__employeeName"> (Employee Name)  </span> 
+            to perform the tasks assigned to you until  <span class="topbar__delegate__model__body__description__delegateEndDate"> (Delegate End Date) </span></p>
+      </div>
+      <div class="topbar__delegate__model__actions"><button
+          class="topbar__delegate__model__actions__button topbar__delegate__model__actions__button--cancel clancel2Deg">Cancel</button><button
+          class="topbar__delegate__model__actions__button topbar__delegate__model__actions__button--next sureDeg">Done</button>
+      </div>
+    </div>
+  </div>
 
 
 
 
+  <script>
 
-
+    // addDeglion
+    document.querySelector(".addDeglion").addEventListener("click",()=>{
+    document.querySelector(".stepDeg1").classList.remove("hidden")
+    })
+    
+    document.querySelector(".closeXX").addEventListener("click",()=>{
+    document.querySelector(".stepDeg1").classList.add("hidden")
+    })
+    
+    document.querySelector(".cancelDeg").addEventListener("click",()=>{
+    document.querySelector(".stepDeg1").classList.add("hidden")
+    })
+    
+    document.querySelector(".nextDeg").addEventListener("click",()=>{
+    document.querySelector(".stepDeg2").classList.remove("hidden")
+    })
+    
+    document.querySelector(".clancel2Deg").addEventListener("click",()=>{
+    document.querySelector(".stepDeg2").classList.add("hidden")
+    document.querySelector(".stepDeg1").classList.add("hidden")
+    })
+    
+    document.querySelector(".sureDeg").addEventListener("click",()=>{
+    document.querySelector(".stepDeg2").classList.add("hidden")
+    document.querySelector(".stepDeg1").classList.add("hidden")
+    })
+    
+    document.querySelector(".clancelDeg2Icon").addEventListener("click",()=>{
+    document.querySelector(".stepDeg2").classList.add("hidden")
+    document.querySelector(".stepDeg1").classList.add("hidden")
+    })
+    </script>
 
   
 </body>

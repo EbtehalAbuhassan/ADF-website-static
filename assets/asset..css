@@ -495,7 +495,8 @@ html[lang=en] .topbar__notifications__item__top__title:before {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem
+    gap: 1rem;
+    width:100%
 }
 
 .topbar__user__actions {
@@ -795,11 +796,13 @@ height: 100px;
 }
 
 html[lang=ar] .main__content__box {
-    padding: 2rem
+    padding: 2rem;
+    width:100%
 }
 
 html[lang=en] .main__content__box {
-    padding: 2rem 4rem 2rem 2rem
+    padding: 2rem 4rem 2rem 2rem;
+    width:100%
 }
 
 .filter {
@@ -810,7 +813,8 @@ html[lang=en] .main__content__box {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch
+    align-items: stretch;
+    width: 100%;
 }
 
 .filter__tabs {
@@ -840,11 +844,12 @@ html[lang=en] .main__content__box {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    gap: 1.4rem
+    gap: 1.4rem;
+    width:100%
 }
 
 .filter__container.with-tabs {
-    padding: 1rem 2rem
+    padding: 1rem 0rem
 }
 
 .filter__select {
@@ -2048,7 +2053,8 @@ html[lang=en] .projects__item__header__status:before {
     align-items: stretch;
     border-radius: .5rem;
     background: white;
-    box-shadow: 0 4px 20px #eeeeee80
+    box-shadow: 0 4px 20px #eeeeee80;
+    width: 100%;
 }
 
 .initiatives .initiatives__item__top {
@@ -2063,7 +2069,8 @@ html[lang=en] .projects__item__header__status:before {
 .initiatives .initiatives__item__top__image img {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
+    width: 100%;
 }
 
 .initiatives .initiatives__item__bottom {
@@ -2071,7 +2078,8 @@ html[lang=en] .projects__item__header__status:before {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 2rem
+    padding: 2rem;
+    width:100%
 }
 
 .initiatives .initiatives__item__bottom .menu {
@@ -2253,7 +2261,8 @@ html[lang=en] .projects__item__header__status:before {
     border-radius: 2rem;
     background: white;
     box-shadow: 0 4px 20px #eeeeee80;
-    gap: 1rem
+    gap: 1rem;
+    width:100%
 }
 
 .project-center .project-center__item__header {
@@ -3046,6 +3055,11 @@ html[lang=en] .project-details .project-dates .project-start-date {
     border-radius: 8px;
     box-shadow: 10px 10px 20px #00000038
 }
+.listing-dialog-containerr .newContiner{
+display: block;
+/* flex-direction: row; */
+width: 100%;
+}
 
 .listing-dialog-header {
     padding: 10px 20px;
@@ -3481,7 +3495,7 @@ flex-direction: column !important;
     }
   }
 
-  @media only screen  and (max-width: 999px) {
+  @media only screen and (min-width: 750px) and (max-width: 999px) {
     .row {
   display: flex;
   flex-direction: column !important;
@@ -3506,4 +3520,68 @@ flex-direction: column !important;
     .card{
         width:100% !important
     }
+    .topbar__breadcrumbList__item--first{
+        font-size: 1.5rem;
+      }
+      .topbar__user__info{
+        font-size: 1.1rem;
+      }
+      .sidebar__menu__item a span {
+        font-size: 1.1rem;
+          }
   }
+
+  @media only screen  and (max-width: 750px) {
+    .row {
+  display: flex;
+  flex-direction: column !important;
+  gap: 10px !important;
+    }
+    .shadow-box{
+        width:100% !important;
+    }
+    .line-chart-container{
+        width: 100%;
+    }
+    .charts-row{
+display: flex;
+flex-direction: column !important;
+    }
+    .ps-body{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: none !important;
+        gap:3rem !important
+    }
+    .card{
+        width:100% !important
+    }
+      .list-wrapper .list{
+
+    }
+    /* .table{
+        overflow-x: scroll;
+
+    } */
+    ul.horizontal-list li {
+        display: inline; /* Display list items inline horizontally */
+        margin-right: 10px; /* Add some space between list items */
+      }
+      .topbar__user__info{
+        font-size: 1rem;
+      }
+      .topbar__breadcrumbList__item--first{
+        font-size: 1.5rem;
+      }
+      .table table  {
+        overflow-x: auto;
+        width: 590px
+      }
+      .sidebar__menu__item a span {
+        font-size: 1.1rem;
+          }
+  }
+  .table__content{
+    width: 100%;
+  /* overflow-x: auto; */
+}

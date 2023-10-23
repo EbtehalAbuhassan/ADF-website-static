@@ -348,12 +348,12 @@
             <div class="shadow-box stats-cards-box">
               <div class="stats-cards-header">
                 <h5>Statistics of strategic projects</h5>
-                <div class="ps-export">
+                <!-- <div class="ps-export">
                   <p>Export</p>
                   <div class="ps-export__icon">
                     <img src="/assets/icons/export.svg" alt="export" />
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="stats-cards-row">
                 <div style="background-color: #dcfce7" class="card">
@@ -390,25 +390,25 @@
             </div>
             <div>
               <div class="table">
-                <div class="table__header"><h3>Strategic Projects</h3></div>
+                <div class="table__header"><h3>strategic Projects</h3></div>
                 <div class="table__content">
                   <div id="filter" class="filter">
                     <div class="filter__tabs">
                       <a href="#" class="filter__tabs__link"
-                        ><div class="filter__tabs__tab">
+                        ><div class="filter__tabs__tab" data-filter="">
                           <p>All</p>
                         </div></a
                       ><a href="#" class="filter__tabs__link"
-                        ><div class="filter__tabs__tab">
-                          <p>New Projects</p>
-                        </div></a
-                      ><a href="#" class="filter__tabs__link"
-                        ><div class="filter__tabs__tab">
+                        ><div class="filter__tabs__tab" data-filter="Active">
                           <p>Active Projects</p>
                         </div></a
                       ><a href="#" class="filter__tabs__link"
-                        ><div class="filter__tabs__tab">
-                          <p>Completed Projects</p>
+                        ><div class="filter__tabs__tab" data-filter="Inactive">
+                          <p>Inactive Projects</p>
+                        </div></a
+                      ><a href="#" class="filter__tabs__link"
+                        ><div class="filter__tabs__tab" data-filter="Deleted">
+                          <p>Deleted Projects</p>
                         </div></a
                       >
                     </div>
@@ -508,8 +508,8 @@
                         <td id="ownerDepartment0" data-filter="ownerDepartment">
                           Owner Department 1
                         </td>
-                        <td id="projectStatus0" data-filter="projectStatus">
-                          <span class="status warning">Inactive</span>
+                        <td id="projectStatus0" class="alltabs" data-filter="Deleted">
+                          <span class="status danger">Deleted</span>
                         </td>
                         <td id="editDate0" data-filter="editDate">
                           2021-01-01
@@ -552,7 +552,7 @@
                         <td id="ownerDepartment1" data-filter="ownerDepartment">
                           Owner Department 2
                         </td>
-                        <td id="projectStatus1" data-filter="projectStatus">
+                        <td id="projectStatus1" class="alltabs" data-filter="Active">
                           <span class="status success">Active</span>
                         </td>
                         <td id="editDate1" data-filter="editDate">
@@ -596,8 +596,8 @@
                         <td id="ownerDepartment2" data-filter="ownerDepartment">
                           Owner Department 3
                         </td>
-                        <td id="projectStatus2" data-filter="projectStatus">
-                          <span class="status warning">Inactive</span>
+                        <td id="projectStatus2" class="alltabs" data-filter="Active">
+                          <span class="status success">Active</span>
                         </td>
                         <td id="editDate2" data-filter="editDate">
                           2021-01-01
@@ -640,7 +640,7 @@
                         <td id="ownerDepartment3" data-filter="ownerDepartment">
                           Owner Department 4
                         </td>
-                        <td id="projectStatus3" data-filter="projectStatus">
+                        <td id="projectStatus3" class="alltabs" data-filter="Active">
                           <span class="status success">Active</span>
                         </td>
                         <td id="editDate3" data-filter="editDate">
@@ -684,7 +684,7 @@
                         <td id="ownerDepartment4" data-filter="ownerDepartment">
                           Owner Department 5
                         </td>
-                        <td id="projectStatus4" data-filter="projectStatus">
+                        <td id="projectStatus4" class="alltabs" data-filter="Active">
                           <span class="status success">Active</span>
                         </td>
                         <td id="editDate4" data-filter="editDate">
@@ -728,8 +728,8 @@
                         <td id="ownerDepartment5" data-filter="ownerDepartment">
                           Owner Department 6
                         </td>
-                        <td id="projectStatus5" data-filter="projectStatus">
-                          <span class="status danger">Canceled</span>
+                        <td id="projectStatus5" class="alltabs" data-filter="Active">
+                          <span class="status success">Active</span>
                         </td>
                         <td id="editDate5" data-filter="editDate">
                           2021-01-01
@@ -772,8 +772,8 @@
                         <td id="ownerDepartment6" data-filter="ownerDepartment">
                           Owner Department 7
                         </td>
-                        <td id="projectStatus6" data-filter="projectStatus">
-                          <span class="status warning">Inactive</span>
+                        <td id="projectStatus6" class="alltabs" data-filter="Active">
+                          <span class="status success">Active</span>
                         </td>
                         <td id="editDate6" data-filter="editDate">
                           2021-01-01
@@ -816,7 +816,7 @@
                         <td id="ownerDepartment7" data-filter="ownerDepartment">
                           Owner Department 8
                         </td>
-                        <td id="projectStatus7" data-filter="projectStatus">
+                        <td id="projectStatus7" class="alltabs" data-filter="Inactive">
                           <span class="status warning">Inactive</span>
                         </td>
                         <td id="editDate7" data-filter="editDate">

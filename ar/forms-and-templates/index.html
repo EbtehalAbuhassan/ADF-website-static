@@ -1050,8 +1050,20 @@
 
       })
 
+      
+      document.querySelector(".iconXpopup").addEventListener('click', () => {
+        document.querySelector('.listing-dialog-payment-upload').classList.add('hidden')
+        document.querySelector('.donestep').classList.add('hidden')
+        // document.querySelector('.donestep-new').classList.remove('hidden')
 
+      })
+      
+      document.querySelector(".iconXpopupup").addEventListener('click', () => {
+        document.querySelector('.listing-dialog-payment-upload-new').classList.add('hidden')
+        document.querySelector('.donestep-new').classList.add('hidden')
+        // document.querySelector('.donestep-new').classList.remove('hidden')
 
+      })
     </script>
 
   </main>
@@ -1062,7 +1074,7 @@
     <div class="listing-dialog-overlay"></div>
     <div class="listing-dialog-container">
       <div class="listing-dialog-header"><span class="listing-dialog-title"> اضافة نموذج</span><span
-          class="listing-dialog-close"><img src="/assets/icons/clear.svg"></span></div>
+          class="listing-dialog-close iconXpopup"><img src="/assets/icons/clear.svg"></span></div>
 
 
       <div class="topbar__delegate__model__body_popup ">
@@ -1112,7 +1124,7 @@
     <div class="listing-dialog-overlay"></div>
     <div class="listing-dialog-container">
       <div class="listing-dialog-header"><span class="listing-dialog-title"> اضافة نموذج</span><span
-          class="listing-dialog-close"><img src="/assets/icons/clear.svg"></span></div>
+          class="listing-dialog-close iconXpopupup"><img src="/assets/icons/clear.svg"></span></div>
 
 
       <div class="topbar__delegate__model__body_popup-new ">

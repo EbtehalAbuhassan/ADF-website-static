@@ -347,7 +347,7 @@
                           <ul>
                             <li><a class="updoadfilePopup" href="#">إضافة</a></li>
                             <!-- <li class="showAll"><a href="/ar/forms-and-templates">عرض الكل</a></li> -->
-                            <li class="showAll"><a href="#">عرض الكل</a></li>
+                            <li class="showAll1"><a href="/ar/View-all-project/">عرض الكل</a></li>
                             <!-- <li class="showAll">عرض الكل</li> -->
                           </ul>
                         </div>
@@ -372,7 +372,7 @@
                           <ul>
                             <li><a class="updoadfilePopup" href="#">إضافة</a></li>
                             <!-- <li class="showAll"><a href="/ar/forms-and-templates">عرض الكل</a></li> -->
-                            <li class="showAll"><a href="#">عرض الكل</a></li>
+                           <li class="showAll1"><a href="/ar/View-all-project/">عرض الكل</a></li>
                           </ul>
                         </div>
                       </div>
@@ -396,7 +396,7 @@
                           <ul>
                              <li><a class="updoadfilePopup" href="#">إضافة</a></li>
                             <!-- <li class="showAll"><a href="/ar/forms-and-templates">عرض الكل</a></li> -->
-                            <li class="showAll"><a href="#">عرض الكل</a></li>
+                           <li class="showAll1"><a href="/ar/View-all-project/">عرض الكل</a></li>
                           </ul>
                         </div>
                       </div>
@@ -420,7 +420,7 @@
                           <ul>
                              <li><a class="updoadfilePopup" href="#">إضافة</a></li>
                             <!-- <li class="showAll"><a href="/ar/forms-and-templates">عرض الكل</a></li> -->
-                            <li class="showAll"><a href="#">عرض الكل</a></li>
+                           <li class="showAll1"><a href="/ar/View-all-project/">عرض الكل</a></li>
                           </ul>
                         </div>
                       </div>
@@ -444,7 +444,7 @@
                           <ul>
                              <li><a class="updoadfilePopup" href="#">إضافة</a></li>
                             <!-- <li class="showAll"><a href="/ar/forms-and-templates">عرض الكل</a></li> -->
-                            <li class="showAll"><a href="#">عرض الكل</a></li>
+                           <li class="showAll1"><a href="/ar/View-all-project/">عرض الكل</a></li>
                           </ul>
                         </div>
                       </div>
@@ -468,7 +468,7 @@
                           <ul>
                              <li><a class="updoadfilePopup" href="#">إضافة</a></li>
                             <!-- <li><a href="/ar/forms-and-templates">عرض الكل</a></li> -->
-                            <li class="showAll"><a href="#">عرض الكل</a></li>
+                           <li class="showAll1"><a href="/ar/View-all-project/">عرض الكل</a></li>
                           </ul>
                         </div>
                       </div>
@@ -492,7 +492,7 @@
                           <ul>
                              <li><a class="updoadfilePopup" href="#">إضافة</a></li>
                             <!-- <li><a href="/ar/forms-and-templates">عرض الكل</a></li> -->
-                            <li class="showAll"><a href="#">عرض الكل</a></li>
+                           <li class="showAll1"><a href="/ar/View-all-project/">عرض الكل</a></li>
                           </ul>
                         </div>
                       </div>
@@ -858,7 +858,7 @@
 
 
           </script>
-          <main class="listing-dialog">
+          <main class="listing-dialog" >
             <div class="listing-dialog-overlay"></div>
             <div class="listing-dialog-container">
               <div class="listing-dialog-header"><span class="listing-dialog-title">قوائم المشروع</span><span
@@ -947,7 +947,9 @@
             document.querySelector('.listing-dialog-cancel').addEventListener('click', hideDialog);
             document.querySelector('.listing-dialog-confirm').addEventListener('click', hideDialog);
 
-
+document.querySelector(".iconX-Add").addEventListener("click",()=>{
+  document.querySelector(".listing-dialog-payment-upload-upload").classList.add("hidden")
+})
           </script>
         </div>
         <script type="module">
@@ -987,6 +989,10 @@
           document.querySelector('.listing-dialog-payment-cancel').addEventListener('click', () => {
             document.querySelector('.listing-dialog-payment').classList.remove('show')
           });
+          
+          document.querySelector('.cancel-popup').addEventListener('click', () => {
+            document.querySelector('.listing-dialog-payment').classList.remove('show')
+          });
           document.querySelector('.listing-dialog-payment-confirm').addEventListener('click', () => {
 
             document.querySelector('.topbar__delegate__model__body_popup').classList.add('hidden');
@@ -1000,7 +1006,7 @@
           });
 
          
-          document.querySelector('.listing-dialog-close').addEventListener('click', () => {
+          document.querySelector('.iconX').addEventListener('click', () => {
             // Hide the listing-dialog-footer
             document.querySelector('.listing-dialog-payment').classList.remove('show')
           });
@@ -1014,7 +1020,7 @@
   <div class="listing-dialog-overlay"></div>
   <div class="listing-dialog-container">
     <div class="listing-dialog-header"><span class="listing-dialog-title"> الدفعات المالية</span><span
-        class="listing-dialog-close"><img src="/assets/icons/clear.svg"></span></div>
+        class="listing-dialog-close iconX"><img src="/assets/icons/clear.svg"></span></div>
 
 
     <div class="topbar__delegate__model__body_popup ">
@@ -1071,7 +1077,7 @@
 
     </div>
 
-    <div class="listing-dialog-footer_popUp"><button class="listing-dialog-payment-cancel">الغاء</button><button
+    <div class="listing-dialog-footer_popUp"><button class="listing-dialog-payment-cancel cancel-popup">الغاء</button><button
         class="listing-dialog-payment-confirm">اضافة</button></div>
 
 </main>
@@ -1203,7 +1209,7 @@
 <div class="listing-dialog-overlay"></div>
 <div class="listing-dialog-container">
   <div class="listing-dialog-header"><span class="listing-dialog-title">  اضافة نموذج</span><span
-      class="listing-dialog-close"><img src="/assets/icons/clear.svg"></span></div>
+      class="listing-dialog-close iconX-Add"><img src="/assets/icons/clear.svg"></span></div>
 
 
   <div class="topbar__delegate__model__body_popup-new uploadfiststep ">
