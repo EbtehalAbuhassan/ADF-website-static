@@ -52,7 +52,7 @@ button {
 }
 
 body,
-button,
+/* button, */
 input,
 textarea {
     font-family: Cairo, sans-serif;
