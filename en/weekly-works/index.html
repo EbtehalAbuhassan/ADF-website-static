@@ -378,7 +378,7 @@
                   <div class="filter__more__list">
                     <img src="/assets/icons/list.svg" alt="list" />
                   </div>
-                  <a class="filter__more__add" href="/en"
+                  <a class="filter__more__add addWork" href="#"
                     ><img src="/assets/icons/add.svg" alt="add"
                   /></a>
                 </div>
@@ -837,5 +837,119 @@
         </div>
       </div>
     </main>
+
+
+
+
+
+
+
+
+    <script type="module">
+
+      document.querySelector('.addWork').addEventListener('click', () => {
+        // Hide the listing-dialog-footer
+        document.querySelector('.listing-dialog-payment-upload-workly').classList.remove('hidden');
+      });
+      
+      document.querySelector('.nextStepNew-upload').addEventListener('click', () => {
+        // Hide the listing-dialog-footer
+        document.querySelector('.uploadfiststep').classList.add('hidden');
+        document.querySelector('.footerstep').classList.add('hidden');
+        
+        document.querySelector('.successfullstep').classList.remove('hidden');
+      });
+      
+      document.querySelector('.cancelstep').addEventListener('click', () => {
+        // Hide the listing-dialog-footer
+        document.querySelector('.listing-dialog-payment-upload-workly').classList.add('hidden');
+    
+        
+      });
+      
+      document.querySelector('.agreestepyy').addEventListener('click', () => {
+        // Hide the listing-dialog-footer
+        document.querySelector('.listing-dialog-payment-upload-workly').classList.add('hidden');
+    
+        
+      });
+     
+      document.querySelector('.iconX-Add-work').addEventListener('click', () => {
+        // Hide the listing-dialog-footer
+        document.querySelector('.listing-dialog-payment-upload-workly').classList.add('hidden');
+      });
+    </script>
+  
+    <main class="listing-dialog-payment-upload-workly hidden">
+    </div>
+    <div class="listing-dialog-overlay"></div>
+    <div class="listing-dialog-container">
+      <div class="listing-dialog-header"><span class="listing-dialog-title">  اضافة مهمة</span><span
+          class="listing-dialog-close iconX-Add-work"><img src="/assets/icons/clear.svg"></span></div>
+    
+    
+      <div class="topbar__delegate__model__body_popup-new uploadfiststep ">
+        <!-- <div class="form-group "><label for="attachTheContractAndAwardLetter"> قائمة واحدة 
+            </label>
+          <div class="input-group">
+            <div class="custom-file"><input type="file" class="custom-file-input" id="attachTheContractAndAwardLetter"
+                name="attachTheContractAndAwardLetter" placeholder="ارفاق  الملف"></div>
+            <div class="input-group-append" id="attachTheContractAndAwardLetter-button"><img
+                src="/assets/icons/folder.svg"></div>
+          </div>
+        </div> -->
+  
+        <div class="form-group w-33"><label for="delegateEndDate">تاريخ المهمة </label>
+          <div class="input-group"><input type="date" class="form-control" id="delegateEndDate"
+              name="delegateEndDate" placeholder="تاريخ البدء "></div>
+        </div>
+        <div class="form-group w-20"><label for="projectValue"> الأولوية</label>
+          <div class="input-group"><select class="form-control" id="projectValue" name="projectValue">
+              <option value="1">مرتفعة</option>
+              <option value="2">متوسطة </option>
+              <option value="3"> منخفضة </option>
+            </select></div>
+        </div>
+        <div class="form-group w-20"><label for="projectName"> اسم المهمة</label>
+          <div class="input-group"><input type="text" class="form-control" id="projectName" name="projectName"
+              placeholder="اسم المهمة"></div>
+        </div>
+  
+        <script>(function () {
+            const name = "attachTheContractAndAwardLetter";
+    
+            const input = document.getElementById(name);
+            const button = document.getElementById(`${name}-button`);
+            const label = document.querySelector(".custom-file-label");
+    
+            if (input.type === "file") {
+              button.addEventListener("click", () => {
+                console.log("clicked");
+                input.click();
+              });
+            }
+          })();</script>
+    
+    
+      </div>
+    
+      <div class="stepSeccesfully donestep-new successfullstep hidden">
+        <img class="checkImg" src="../../assets/images/check.png" />
+        <p>تم اضافة   النموذج</p>
+        <button class="listing-dialog-payment-cancel done-new agreestepyy" style="background-color: #2a902d;color: white;">موافق</button>
+    
+      </div>
+    
+      <div class="listing-dialog-footer_popUp-new footerstep"><button class="listing-dialog-payment-cancel cancelstep-new cancelstep">الغاء</button><button
+          class="listing-dialog-payment-confirm nextStepNew-upload">اضافة</button></div>
+    
+    </main>
+
+
+
+
+
+
+
   </body>
 </html>
