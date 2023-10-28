@@ -100,6 +100,14 @@
       </section>
       <div class="main__content">
         <section class="topbar">
+          <div class="iconNavMobile">
+            <img    src="../../assets/images/Hamburger.png"/>
+          </div>
+          <script>
+            document.querySelector(".iconNavMobile").addEventListener("click",()=>{
+              document.querySelector(".navmobile").classList.toggle("hidden")
+            })
+          </script>
           <div class="topbar__breadcrumbList">
             <a href="/ar/reports" class="topbar__breadcrumbList__item--first"
               >التقارير</a
@@ -438,5 +446,49 @@
       </div>
       </div>
     </main>
+    <section class="navmobile hidden">
+      <div class="sidebar__logo">
+        <img src="/assets/images/ADF-logo-main.png" alt="logo" />
+      </div>
+      <div class="sidebar__menu">
+        <ul>
+          <li class="sidebar__menu__item sidebar__menu__item--active" id="dashboard">
+            <a href="/ar"><img src="/assets/icons/dashboard-active.svg" alt="لوحة التحكم" /><span>لوحة التحكم</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="projectCenter">
+            <a href="/ar/project-center"><img src="/assets/icons/project-center.svg" alt="مركز المشاريع" /><span>مركز
+                المشاريع</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="projectPipeline">
+            <a href="/ar/project-pipeline"><img src="/assets/icons/project-pipeline.svg" alt="خطة المشاريع" /><span>خطة
+                المشاريع</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="reports">
+            <a href="/ar/reports"><img src="/assets/icons/reports.svg" alt="التقارير" /><span>التقارير</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="formsAndTemplates">
+            <a href="/ar/forms-and-templates"><img src="/assets/icons/forms-and-templates.svg"
+                alt="النماذج والقوالب" /><span>النماذج والقوالب</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="delegation">
+            <a href="/ar/delegation"><img src="/assets/icons/delegation.svg" alt="التفويض" /><span>التفويض</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="weeklyWorks">
+            <a href="/ar/weekly-works"><img src="/assets/icons/weekly-works.svg" alt="الاعمال الاسبوعية" /><span>الاعمال
+                الاسبوعية</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="initiatives">
+            <a href="/ar/initiatives"><img src="/assets/icons/initiatives.svg"
+                alt="المبادرات" /><span>المبادرات</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="settings">
+            <a href="/ar"><img src="/assets/icons/settings.svg" alt="الاعدادات" /><span>الاعدادات</span></a>
+          </li>
+          <li class="sidebar__menu__item" id="logout">
+            <a href="/ar"><img src="/assets/icons/logout.svg" alt="تسجيل الخروج" /><span>تسجيل الخروج</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>

@@ -1729,7 +1729,7 @@ html[lang=en] .list-wrapper .btnWithText {
 
 .chart-container {
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .chart-progress {
@@ -3532,6 +3532,9 @@ flex-direction: column !important;
   }
 
   @media only screen  and (max-width: 750px) {
+    .topbar__delegate__model__container {
+width:400px
+    }
     .row {
   display: flex;
   flex-direction: column !important;
@@ -3559,6 +3562,12 @@ flex-direction: column !important;
       .list-wrapper .list{
 
     }
+    .chart-container {
+        width:100%
+    }
+    .ps-header{
+        width:100%
+    }
     /* .table{
         overflow-x: scroll;
 
@@ -3575,7 +3584,7 @@ flex-direction: column !important;
       }
       .table table  {
         overflow-x: auto;
-        width: 590px
+        width: 100%
       }
       .sidebar__menu__item a span {
         font-size: 1.1rem;
@@ -3585,3 +3594,69 @@ flex-direction: column !important;
     width: 100%;
   /* overflow-x: auto; */
 }
+
+
+
+/* .navmobile{
+    display: none;
+} */
+.iconNavMobile{
+    display: none;
+    width:25px;
+    height: 25px;
+    cursor: pointer;
+}
+@media only screen  and (max-width: 1250px) {
+    .stats-cards-row{
+width:100%;
+flex-direction:column
+    }
+    .card{
+        width:100%;
+    }
+    .reports{
+display: flex;
+flex-wrap: wrap;
+    }
+    }
+
+
+
+ 
+
+    @media only screen  and (max-width: 1250px) {
+        .stats-cards-row{
+    width:100%;
+    flex-direction:column
+        }
+           .sidebar{
+            display: none;
+        }
+        .navmobile{
+            /* display: flex; */
+            display: block;
+    position: absolute;
+    top: 0%;
+    width: 35%;
+    background: white;
+    height: 100vh
+        }
+        .iconNavMobile{
+            display: block;
+        }
+        .main{
+            grid-template-columns:none
+        }
+        .listing-dialog-container{
+            width:400px
+        }
+        .work-structure{
+flex-direction: column;
+        }
+        .work-structure .structure{
+width:100%
+        }
+        .work-structure .payments{
+            width:100%
+        }
+        }
