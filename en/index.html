@@ -100,6 +100,14 @@
       </section>
       <div class="main__content">
         <section class="topbar">
+          <div class="iconNavMobile">
+            <img    src="../assets//images/Hamburger.png"/>
+          </div>
+          <script>
+            document.querySelector(".iconNavMobile").addEventListener("click",()=>{
+              document.querySelector(".navmobile").classList.toggle("hidden")
+            })
+          </script>
           <div class="topbar__breadcrumbList">
             <a href="/en" class="topbar__breadcrumbList__item--first"
               >Dashboard</a
@@ -1606,5 +1614,118 @@
         });
       });
     </script>
+
+
+
+
+
+
+
+
+
+
+
+<section class="navmobile hidden">
+  <div class="sidebar__logo">
+    <img src="/assets/images/ADF-logo-main.png" alt="logo" />
+  </div>
+  <div class="sidebar__menu">
+    <ul>
+      <li
+        class="sidebar__menu__item sidebar__menu__item--active"
+        id="dashboard"
+      >
+        <a href="/en"
+          ><img
+            src="/assets/icons/dashboard-active.svg"
+            alt="Dashboard"
+          /><span>Dashboard</span></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="projectCenter">
+        <a href="/en/project-center"
+          ><img
+            src="/assets/icons/project-center.svg"
+            alt="Project Center"
+          /><span>Project Center</span></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="projectPipeline">
+        <a href="/en/project-pipeline"
+          ><img
+            src="/assets/icons/project-pipeline.svg"
+            alt="Project Pipeline"
+          /><span>Project Pipeline</span></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="reports">
+        <a href="/en/reports"
+          ><img src="/assets/icons/reports.svg" alt="Reports" /><span
+            >Reports</span
+          ></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="formsAndTemplates">
+        <a href="/en/forms-and-templates"
+          ><img
+            src="/assets/icons/forms-and-templates.svg"
+            alt="Forms and Templates"
+          /><span>Forms and Templates</span></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="delegation">
+        <a href="/en/delegation"
+          ><img
+            src="/assets/icons/delegation.svg"
+            alt="Delegation"
+          /><span>Delegation</span></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="weeklyWorks">
+        <a href="/en/weekly-works"
+          ><img
+            src="/assets/icons/weekly-works.svg"
+            alt="Weekly Works"
+          /><span>Weekly Works</span></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="initiatives">
+        <a href="/en/initiatives"
+          ><img
+            src="/assets/icons/initiatives.svg"
+            alt="Initiatives"
+          /><span>Initiatives</span></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="settings">
+        <a href="/en"
+          ><img src="/assets/icons/settings.svg" alt="Settings" /><span
+            >Settings</span
+          ></a
+        >
+      </li>
+      <li class="sidebar__menu__item" id="logout">
+        <a href="/en"
+          ><img src="/assets/icons/logout.svg" alt="Sign Out" /><span
+            >Sign Out</span
+          ></a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
