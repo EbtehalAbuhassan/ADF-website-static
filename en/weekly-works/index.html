@@ -957,8 +957,8 @@
 
     <section class="navmobile hidden">
       <div class="sidebar__logo">
-        <img src="/assets/images/ADF-logo-main.png" alt="logo" />
-      </div>
+        <img class="logo" src="/assets/images/ADF-logo-main.png" alt="logo" />
+        <div class="close"><img src="/assets/icons/close.svg" alt="close"></div>      </div>
       <div class="sidebar__menu">
         <ul>
           <li
@@ -1044,6 +1044,11 @@
         </ul>
       </div>
     </section>
+    <script>
+      document.querySelector(".close").addEventListener("click",()=>{
+        document.querySelector(".navmobile").classList.add("hidden")
+      })
+    </script>
 
 
   </body>

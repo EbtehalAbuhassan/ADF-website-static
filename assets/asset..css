@@ -754,7 +754,24 @@ height: 100px;
 .sidebar__logo {
     margin-bottom: 2rem
 }
-
+.navmobile .sidebar__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around
+}
+.navmobile .sidebar__logo .logo {
+    width: 65%;
+    padding-top: 15px
+}
+.navmobile .sidebar__logo .close {
+    width: 5%;
+    padding-top: 15px;
+    cursor: pointer;
+}
+/* .sidebar__logo .sidebar img {
+   width:750px 
+} */
 .sidebar__logo img {
     width: 100%
 }
@@ -3655,6 +3672,8 @@ flex-direction: column !important;
     }
     .filter__tabs{
         flex-direction: column;
+        overflow-y: scroll;
+        height: 30vh;
     }
     .weekly-works__item{
         flex-wrap: wrap;
